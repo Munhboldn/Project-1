@@ -227,7 +227,3 @@ if 'quiz_verb' in st.session_state:
         
         # Clear quiz state after submission
         del st.session_state.quiz_verb
-
-# Add footer
-st.markdown("---")
-st.write("Created with ❤️ using Streamlit")
