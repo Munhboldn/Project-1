@@ -126,15 +126,13 @@ verb_dict = {
     "write": {"past": "wrote", "participle": "written"},
 }
 
-# Function to set a background image
-def add_bg_from_local(image_path):
-    with open(image_path, "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read()).decode()
+# Function to set a background image from a URL
+def add_bg_from_url(image_url):
     st.markdown(
         f"""
         <style>
         .stApp {{
-            background-image: url("data:image/jpeg;base64,{encoded_string}");
+            background-image: url("{image_url}");
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -144,8 +142,8 @@ def add_bg_from_local(image_path):
         unsafe_allow_html=True
     )
 
-# Set the background image
-add_bg_from_local("E:/inter python/Project 1/10139763.jpg")
+# Set the background image from the GitHub URL
+add_bg_from_url("https://raw.githubusercontent.com/Munhboldn/Project-1/main/10139763.jpg")
 
 # App setup 
 st.title("✨ Irregular Verb Form Finder ✨")
