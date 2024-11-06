@@ -1,6 +1,6 @@
 import streamlit as st
 import random
-import base64
+
 
 # Dictionary with irregular verbs only (base, past, and past participle forms)
 verb_dict = {
